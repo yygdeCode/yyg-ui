@@ -1,10 +1,22 @@
 import Col from './Col'
 import Row from './Row'
 import Date from './Date'
+import Footer from './Footer'
+import Button from './Button'
+import Main from './Main'
+import Aside from './Aside'
+import Header from './Header'
+import Container from './Container'
 const components = [
   Col,
   Row,
-  Date
+  Date,
+  Footer,
+  Button,
+  Main,
+  Aside,
+  Header,
+  Container
 ]
 
 
@@ -19,11 +31,23 @@ export default {
   Col,
   Row,
   Date,
-  install
+  install,
+  Footer,
+  Button,
+  Main,
+  Aside,
+  Header,
+  Container
 }
 export {
   Col,
   Row,
   Date,
-  install
+  install,
+  Footer,
+  Button,
+  Main,
+  Aside,
+  Header,
+  Container
 }

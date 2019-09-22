@@ -3,7 +3,7 @@
     <input type="text" :value="formatDate" />
     <transition name="slide-fade">
       <div v-if="show" class="panel">
-        <div class="panel-nav">
+        <div class="pany-nav">
           <span @click="prevYear">&lt;&lt;</span>
           <span @click="prevMonth">&lt;</span>
           <span>{{time.year}}年</span>
@@ -11,7 +11,7 @@
           <span @click="nextMonth">&gt;</span>
           <span @click="nextYear">&gt;&gt;</span>
         </div>
-        <div class="panel-content">
+        <div class="pany-content">
           <div class="days">
             <span v-for="d in weeks" :key="d" class="week">{{d}}</span>
             <div v-for="i in 6" :key="i">
@@ -30,7 +30,7 @@
             </div>
           </div>
         </div>
-        <div class="panel-footer" @click="returnToday">返回今天</div>
+        <div class="pany-footer" @click="returnToday">返回今天</div>
         <div class="arrow"></div>
       </div>
     </transition>
@@ -209,15 +209,15 @@ export default {
   top: 1px;
   left: -6px;
 }
-.panel-nav {
+.pany-nav {
   height: 30px;
   display: flex;
   justify-content: space-around;
 }
-.panel-nav span {
+.pany-nav span {
   cursor: pointer;
 }
-.panel-footer {
+.pany-footer {
   height: 30px;
   line-height: 30px;
   background: #33333321;
@@ -240,7 +240,7 @@ export default {
   border-color: #409eff;
 }
 
-.panel-content .week {
+.pany-content .week {
   height: 32px;
   width: 32px;
   display: inline-block;
@@ -250,7 +250,7 @@ export default {
   color: #999;
   
 }
-.panel-content .cell {
+.pany-content .cell {
   height: 32px;
   width: 32px;
   display: inline-block;
@@ -260,7 +260,7 @@ export default {
   border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 50%;
 }
-.panel-content .currentMonth:hover {
+.pany-content .currentMonth:hover {
   color: #398bfb;
 }
 .notCurrentMonth {

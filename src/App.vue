@@ -1,7 +1,88 @@
 <template>
   <div id="app">
      日历组件:<y-date v-model="nowData"/>
+  <y-row>
+  <y-button>默认按钮</y-button>
+  <y-button type="primary">主要按钮</y-button>
+  <y-button type="success">成功按钮</y-button>
+  <y-button type="info">信息按钮</y-button>
+  <y-button type="warning">警告按钮</y-button>
+  <y-button type="danger">危险按钮</y-button>
+</y-row>
+
+<y-row>
+  <y-button plain>朴素按钮</y-button>
+  <y-button type="primary" plain>主要按钮</y-button>
+  <y-button type="success" plain>成功按钮</y-button>
+  <y-button type="info" plain>信息按钮</y-button>
+  <y-button type="warning" plain>警告按钮</y-button>
+  <y-button type="danger" plain>危险按钮</y-button>
+</y-row>
+
+<y-row>
+  <y-button round>圆角按钮</y-button>
+  <y-button type="primary" round>主要按钮</y-button>
+  <y-button type="success" round>成功按钮</y-button>
+  <y-button type="info" round>信息按钮</y-button>
+  <y-button type="warning" round>警告按钮</y-button>
+  <y-button type="danger" round>危险按钮</y-button>
+</y-row>
+
+
+<y-container>
+  <y-header>Header</y-header>
+  <y-main>Main</y-main>
+</y-container>
+
+<y-container>
+  <y-header>Header</y-header>
+  <y-main>Main</y-main>
+  <y-footer>Footer</y-footer>
+</y-container>
+
+<y-container>
+  <y-aside width="200px">Aside</y-aside>
+  <y-main>Main</y-main>
+</y-container>
+
+<y-container>
+  <y-header>Header</y-header>
+  <y-container>
+    <y-aside width="200px">Aside</y-aside>
+    <y-main>Main</y-main>
+  </y-container>
+</y-container>
+
+<y-container>
+  <y-header>Header</y-header>
+  <y-container>
+    <y-aside width="200px">Aside</y-aside>
+    <y-container>
+      <y-main>Main</y-main>
+      <y-footer>Footer</y-footer>
+    </y-container>
+  </y-container>
+</y-container>
+
+<y-container>
+  <y-aside width="200px">Aside</y-aside>
+  <y-container>
+    <y-header>Header</y-header>
+    <y-main>Main</y-main>
+  </y-container>
+</y-container>
+
+<y-container>
+  <y-aside width="200px">Aside</y-aside>
+  <y-container>
+    <y-header>Header</y-header>
+    <y-main>Main</y-main>
+    <y-footer>Footer</y-footer>
+  </y-container>
+</y-container>
+
     <h2>基础布局 实现col组件 :span功能</h2>
+
     <y-row>
       <y-col :span="24">
         <div class="grid-content bg-purple-dark"></div>
@@ -193,14 +274,8 @@
 </template>
 
 <script>
-// import elRow from "@element/Row.vue";
-// import yCol from "@element/Col.vue";
 export default {
   name: "app",
-  components: {
-    // elRow,
-    // yCol
-  },
   data(){
         return {
             nowData : new Date()
@@ -244,4 +319,40 @@ body {
   padding: 10px 0;
   background-color: #f9fafc;
 }
+
+// 
+ .y-header, .y-footer {
+    background-color: #B3C0D1;
+    color: #333;
+    text-align: center;
+    line-height: 60px;
+  }
+  
+  .y-aside {
+    background-color: #D3DCE6;
+    color: #333;
+    text-align: center;
+    line-height: 200px;
+  }
+  
+  .y-main {
+    background-color: #E9EEF3;
+    color: #333;
+    text-align: center;
+    line-height: 160px;
+  }
+  
+  body > .y-container {
+    margin-bottom: 40px;
+  }
+  
+  .y-container:nth-child(5) .y-aside,
+  .y-container:nth-child(6) .y-aside {
+    line-height: 260px;
+  }
+  
+  .y-container:nth-child(7) .y-aside {
+    line-height: 320px;
+  }
+ 
 </style>
